@@ -159,9 +159,9 @@ func (c *cachedObjectClient) buildCache(ctx context.Context, forceRefresh bool) 
 		}
 
 		ss := strings.Split(object.Key, delimiter)
-		if len(ss) < 2 || len(ss) > 3 {
-			return fmt.Errorf("invalid key: %s", object.Key)
-		}
+		// if len(ss) < 2 || len(ss) > 3 {
+		// 	return fmt.Errorf("invalid key: %s", object.Key)
+		// }
 
 		tableName := ss[0]
 		tbl, ok := c.tables[tableName]
